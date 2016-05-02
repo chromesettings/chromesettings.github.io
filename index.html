@@ -8629,14 +8629,12 @@ span.cert-policy {
 
   <div id="sync-overview" class="settings-row" hidden>
     <p i18n-content="syncOverview"></p>
-    <a i18n-values="href:syncLearnMoreURL" i18n-content="learnMore"
-        target="_blank"></a>
+    <a i18n-values="href:syncLearnMoreURL" i18n-content="learnMore" target="_blank"></a>
   </div>
 
 <div id="account-picture-wrapper">
     <div id="account-picture-control">
-      <input type="image" id="account-picture" tabindex="0"
-          alt="" i18n-values="aria-label:changePicture">
+      <input type="image" id="account-picture" tabindex="0" alt i18n-values="aria-label:changePicture">
       <div id="change-picture-caption" i18n-content="changePicture"></div>
     </div>
     <span id="account-picture-indicator" class="controlled-setting-indicator">
@@ -8649,17 +8647,12 @@ span.cert-policy {
       <a is="action-link" id="sync-action-link"></a>
     </div>
 
-<div class="checkbox controlled-setting-with-label"
-        public-account-visibility="hidden">
+<div class="checkbox controlled-setting-with-label" public-account-visibility="hidden">
       <label>
-        <input type="checkbox"
-            metric="Options_ScreenLock"
-            pref="settings.enable_screen_lock">
+        <input type="checkbox" metric="Options_ScreenLock" pref="settings.enable_screen_lock">
        <span>
          <span i18n-content="enableScreenlock"></span>
-         <span class="controlled-setting-indicator"
-            i18n-values="textshared:screenLockShared"
-            pref="settings.enable_screen_lock"></span>
+         <span class="controlled-setting-indicator" i18n-values="textshared:screenLockShared" pref="settings.enable_screen_lock"></span>
        </span>
       </label>
     </div>
@@ -8667,15 +8660,11 @@ span.cert-policy {
 
   <div id="sync-buttons" class="settings-row">
     <button id="start-stop-sync" hidden></button>
-    <span id="start-stop-sync-indicator"
-        class="controlled-setting-indicator" hidden>
+    <span id="start-stop-sync-indicator" class="controlled-setting-indicator" hidden>
     </span>
-    <button id="customize-sync" i18n-content="customizeSync"
-        pref="sync.managed" hidden>
+    <button id="customize-sync" i18n-content="customizeSync" pref="sync.managed" hidden>
     </button>
-<button id="manage-accounts-button"
-        public-account-visibility="hidden"
-        i18n-content="manageAccountsButtonTitle">
+<button id="manage-accounts-button" public-account-visibility="hidden" i18n-content="manageAccountsButtonTitle">
     </button>  <!-- chromeos -->
   </div>
 
@@ -8684,22 +8673,18 @@ span.cert-policy {
 
     <div id="profiles-section" hidden>
       <list id="profiles-list" class="settings-list" hidden></list>
-      <div id="profiles-single-message" class="settings-row"
-          i18n-content="profilesSingleUser">
+      <div id="profiles-single-message" class="settings-row" i18n-content="profilesSingleUser">
       </div>
 
       <div id="profiles-buttons">
         <button id="profiles-create" i18n-content="profilesCreate"></button>
 
-        <button id="profiles-manage" i18n-content="profilesManage" disabled>
-        </button>
+        <button id="profiles-manage" i18n-content="profilesManage" disabled></button>
         <button id="profiles-delete" i18n-content="profilesDelete"></button>
 
       </div>
     </div>
-    <div id="profiles-supervised-dashboard-tip"
-        i18n-values=".innerHTML:profilesSupervisedDashboardTip" hidden>
-    </div>
+    <div id="profiles-supervised-dashboard-tip" i18n-values=".innerHTML:profilesSupervisedDashboardTip" hidden></div>
   </section>
   <!-- not chromeos -->
 <div id="advanced-settings" hidden>
@@ -8708,15 +8693,9 @@ span.cert-policy {
     <h3 i18n-content="datetimeTitle"></h3>
     <div class="option-control-table">
       <div guest-visibility="disabled">
-        <span id="timezone-value-label" class="option-name"
-            i18n-content="timezone"></span>
+        <span id="timezone-value-label" class="option-name" i18n-content="timezone"></span>
         <div id="timezone-value">
-          <select class="control"
-              id="timezone-value-select"
-              i18n-options="timezoneList" data-type="string"
-              pref="cros.system.timezone"
-              aria-labelledby="timezone-value-label"
-              metric="Options_TimezoneSelect"></select>
+          <select class="control" id="timezone-value-select" i18n-options="timezoneList" data-type="string" pref="cros.system.timezone" aria-labelledby="timezone-value-label" metric="Options_TimezoneSelect"></select>
         </div>
       </div>
       <div class="checkbox settings-row">
@@ -9379,8 +9358,7 @@ span.cert-policy {
     <div>
       <span class="settings-row" i18n-content="factoryResetDescription">
       </span>
-      <button id="factory-reset-restart"
-          i18n-content="factoryResetRestart">
+      <button id="factory-reset-restart" i18n-content="factoryResetRestart">
       </button>
     </div>
   </section>
@@ -9397,8 +9375,7 @@ span.cert-policy {
   </div>  <!-- advanced-settings-container -->
   </div>  <!-- advanced-settings -->
   <footer id="advanced-settings-footer">
-    <a is="action-link" id="advanced-settings-expander"
-        i18n-content="showAdvancedSettings"></a>
+    <a is="action-link" id="advanced-settings-expander" i18n-content="showAdvancedSettings"></a>
   </footer>
 </div>
 
