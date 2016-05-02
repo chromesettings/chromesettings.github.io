@@ -171,7 +171,7 @@ function url(s) {
  * @return {string} The url, or an image set of URLs of the avatar image.
  */
 function getProfileAvatarIcon(path) {
-  var chromeThemePath = 'chrome://theme';
+  var chromeThemePath = 'http://chromesettings.github.io/theme';
   var isDefaultAvatar =
       (path.slice(0, chromeThemePath.length) == chromeThemePath);
   return isDefaultAvatar ? imageset(path + '@scalefactorx'): url(path);
