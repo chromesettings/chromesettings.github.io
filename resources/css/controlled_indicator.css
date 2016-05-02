@@ -1,0 +1,98 @@
+/* Copyright 2013 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+/* Controlled setting indicator and bubble. */
+
+.controlled-setting-with-label input:disabled + span {
+  color: #999;
+}
+
+.controlled-setting-indicator {
+  -webkit-margin-end: 0.3em;
+}
+
+.controlled-setting-indicator:not([controlled-by]) {
+  display: none;
+}
+
+.controlled-setting-indicator[controlled-by] > div {
+  background-position: 50%;
+  background-size: 18px;
+}
+
+.controlled-setting-indicator:-webkit-any([controlled-by='recommended'],
+    [controlled-by='hasRecommendation']) > div,
+    .controlled-setting-indicator[controlled-by='policy'] > div {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzYyNjI2MiI+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMjQgMTRWNkg0djM2aDQwVjE0SDI0ek0xMiAzOEg4di00aDR2NHptMC04SDh2LTRoNHY0em0wLThIOHYtNGg0djR6bTAtOEg4di00aDR2NHptOCAyNGgtNHYtNGg0djR6bTAtOGgtNHYtNGg0djR6bTAtOGgtNHYtNGg0djR6bTAtOGgtNHYtNGg0djR6bTIwIDI0SDI0di00aDR2LTRoLTR2LTRoNHYtNGgtNHYtNGgxNnYyMHptLTQtMTZoLTR2NGg0di00em0wIDhoLTR2NGg0di00eiIvPgo8L3N2Zz4K);
+}
+
+.controlled-setting-indicator[controlled-by='owner'] > div {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzYyNjI2MiI+CiAgICA8cGF0aCBkPSJNMjQgNEMxMi45NSA0IDQgMTIuOTUgNCAyNHM4Ljk1IDIwIDIwIDIwIDIwLTguOTUgMjAtMjBTMzUuMDUgNCAyNCA0em0wIDZjMy4zMSAwIDYgMi42OSA2IDYgMCAzLjMyLTIuNjkgNi02IDZzLTYtMi42OC02LTZjMC0zLjMxIDIuNjktNiA2LTZ6bTAgMjguNGMtNS4wMSAwLTkuNDEtMi41Ni0xMi02LjQ0LjA1LTMuOTcgOC4wMS02LjE2IDEyLTYuMTZzMTEuOTQgMi4xOSAxMiA2LjE2Yy0yLjU5IDMuODgtNi45OSA2LjQ0LTEyIDYuNDR6Ii8+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo=);
+}
+
+.controlled-setting-indicator[controlled-by='extension'] > div {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzYyNjI2MiI+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNNDEgMjJoLTN2LThjMC0yLjIxLTEuNzktNC00LTRoLThWN2MwLTIuNzYtMi4yNC01LTUtNXMtNSAyLjI0LTUgNXYzSDhjLTIuMjEgMC0zLjk4IDEuNzktMy45OCA0bC0uMDEgNy42SDdjMi45OCAwIDUuNCAyLjQyIDUuNCA1LjRTOS45OCAzMi40IDcgMzIuNEg0LjAxTDQgNDBjMCAyLjIxIDEuNzkgNCA0IDRoNy42di0zYzAtMi45OCAyLjQyLTUuNCA1LjQtNS40IDIuOTggMCA1LjQgMi40MiA1LjQgNS40djNIMzRjMi4yMSAwIDQtMS43OSA0LTR2LThoM2MyLjc2IDAgNS0yLjI0IDUtNXMtMi4yNC01LTUtNXoiLz4KPC9zdmc+Cg==);
+}
+
+.controlled-setting-indicator[controlled-by='shared'] > div {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzYyNjI2MiI+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMzIgMjJjMy4zMSAwIDUuOTgtMi42OSA1Ljk4LTZzLTIuNjctNi01Ljk4LTZjLTMuMzEgMC02IDIuNjktNiA2czIuNjkgNiA2IDZ6bS0xNiAwYzMuMzEgMCA1Ljk4LTIuNjkgNS45OC02cy0yLjY3LTYtNS45OC02Yy0zLjMxIDAtNiAyLjY5LTYgNnMyLjY5IDYgNiA2em0wIDRjLTQuNjcgMC0xNCAyLjM0LTE0IDd2NWgyOHYtNWMwLTQuNjYtOS4zMy03LTE0LTd6bTE2IDBjLS41OCAwLTEuMjMuMDQtMS45My4xMUMzMi4zOSAyNy43OCAzNCAzMC4wMyAzNCAzM3Y1aDEydi01YzAtNC42Ni05LjMzLTctMTQtN3oiLz4KPC9zdmc+Cg==);
+}
+
+.controlled-setting-indicator[controlled-by='child-custodian'] > div {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzYyNjI2MiI+CiAgICA8cGF0aCBkPSJNMjQgNGMzLjMxIDAgNiAyLjY5IDYgNnMtMi42OSA2LTYgNi02LTIuNjktNi02IDIuNjktNiA2LTZ6Ii8+CiAgICA8cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDQ4djQ4SDBWMHoiLz4KICAgIDxjaXJjbGUgZmlsbD0ibm9uZSIgY3g9IjI0IiBjeT0iMjYiIHI9IjQiLz4KICAgIDxwYXRoIGQ9Ik0yNCAxOGMtNi4xNiAwLTEzIDMuMTItMTMgNy4yM3YxMS41NGMwIDIuMzIgMi4xOSA0LjMzIDUuMiA1LjYzIDIuMzIgMSA1LjEyIDEuNTkgNy44IDEuNTkuNjYgMCAxLjMzLS4wNiAyLS4xNHYtNS4yYy0uNjcuMDgtMS4zNC4xNC0yIC4xNC0yLjYzIDAtNS4zOS0uNTctNy42OC0xLjU1LjY3LTIuMTIgNC4zNC0zLjY1IDcuNjgtMy42NS44NiAwIDEuNzUuMTEgMi42LjI5IDIuNzkuNjIgNS4yIDIuMTUgNS4yIDQuMDR2NC40N2MzLjAxLTEuMzEgNS4yLTMuMzEgNS4yLTUuNjNWMjUuMjNDMzcgMjEuMTIgMzAuMTYgMTggMjQgMTh6bTAgMTJjLTIuMjEgMC00LTEuNzktNC00czEuNzktNCA0LTQgNCAxLjc5IDQgNC0xLjc5IDQtNCA0eiIvPgo8L3N2Zz4K);
+}
+
+.controlled-setting-indicator[controlled-by='supervised-user-custodian'] > div {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzYyNjI2MiI+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMzMgMjRjMi43NiAwIDQuOTgtMi4yNCA0Ljk4LTVzLTIuMjItNS00Ljk4LTVjLTIuNzYgMC01IDIuMjQtNSA1czIuMjQgNSA1IDV6bS0xNS0yYzMuMzEgMCA1Ljk4LTIuNjkgNS45OC02cy0yLjY3LTYtNS45OC02Yy0zLjMxIDAtNiAyLjY5LTYgNnMyLjY5IDYgNiA2em0xNSA2Yy0zLjY3IDAtMTEgMS44NC0xMSA1LjVWMzhoMjJ2LTQuNWMwLTMuNjYtNy4zMy01LjUtMTEtNS41em0tMTUtMmMtNC42NyAwLTE0IDIuMzQtMTQgN3Y1aDE0di00LjVjMC0xLjcuNjctNC42NyA0Ljc0LTYuOTRDMjEgMjYuMTkgMTkuMzEgMjYgMTggMjZ6Ii8+Cjwvc3ZnPgo=);
+}
+
+.controlled-setting-bubble-action {
+  padding: 0 !important;
+}
+
+.controlled-setting-bubble-header {
+  margin-top: 3px;
+}
+
+.controlled-setting-bubble-content-row {
+  height: 35px;
+  position: relative;
+}
+
+.controlled-setting-bubble-extension-name {
+  -webkit-padding-start: 30px;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  height: 24px;
+  margin-top: -9px;
+  overflow: hidden;
+  padding-top: 3px;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 50%;
+  white-space: nowrap;
+  width: 215px;
+}
+
+html[dir='rtl'] .controlled-setting-bubble-extension-name {
+  background-position: right top;
+}
+
+.controlled-setting-bubble-extension-manage-link {
+  margin-left: -0.35em;
+  margin-top: -0.30em;
+  position: absolute;
+  top: 50%;
+}
+
+.controlled-setting-bubble-extension-disable-button {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+html[dir='rtl'] .controlled-setting-bubble-extension-disable-button {
+  left: 0;
+  right: auto;
+}
