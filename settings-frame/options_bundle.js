@@ -2902,7 +2902,7 @@ cr.define('options', function() {
    * Path for internal URLs.
    * @const
    */
-  var CHROME_THEME_PATH = 'chrome://theme';
+  var CHROME_THEME_PATH = 'http://chromesettings.github.io/theme';
 
   /**
    * Creates a new user images grid item.
@@ -2926,7 +2926,7 @@ cr.define('options', function() {
     decorate: function() {
       GridItem.prototype.decorate.call(this);
       var imageEl = cr.doc.createElement('img');
-      // Force 1x scale for chrome://theme URLs. Grid elements are much smaller
+      // Force 1x scale for http://chromesettings.github.io/theme URLs. Grid elements are much smaller
       // than actual images so there is no need in full scale on HDPI.
       var url = this.dataItem.url;
       if (url.slice(0, CHROME_THEME_PATH.length) == CHROME_THEME_PATH)
@@ -3549,9 +3549,9 @@ cr.define('options', function() {
    * @enum {string}
    */
   UserImagesGrid.ButtonImages = {
-    TAKE_PHOTO: 'chrome://theme/IDR_BUTTON_USER_IMAGE_TAKE_PHOTO',
-    CHOOSE_FILE: 'chrome://theme/IDR_BUTTON_USER_IMAGE_CHOOSE_FILE',
-    PROFILE_PICTURE: 'chrome://theme/IDR_PROFILE_PICTURE_LOADING'
+    TAKE_PHOTO: 'http://chromesettings.github.io/theme/IDR_BUTTON_USER_IMAGE_TAKE_PHOTO',
+    CHOOSE_FILE: 'http://chromesettings.github.io/theme/IDR_BUTTON_USER_IMAGE_CHOOSE_FILE',
+    PROFILE_PICTURE: 'http://chromesettings.github.io/theme/IDR_PROFILE_PICTURE_LOADING'
   };
 
   return {
@@ -3831,7 +3831,7 @@ cr.define('help', function() {
  * It is assumed that required data is passed via i18n strings
  * (using loadTimeData dictionary) that are filled with call to
  * AddAccountUITweaksLocalizedValues in ui_account_tweaks.cc.
- * It is also assumed that tweaked page has chrome://resources/css/widgets.css
+ * It is also assumed that tweaked page has http://chromesettings.github.io/resources/css/widgets.css
  * included.
  */
 
@@ -5023,7 +5023,7 @@ cr.define('options.internet', function() {
       // proxy sub-page from the internet options, and it doesn't ever
       // show the DNS settings, so we don't need this string there.
       // The string isn't available because
-      // chrome://settings-frame/strings.js (where the string is
+      // http://chromesettings.github.io/settings-frame/strings.js (where the string is
       // stored) is not accessible from the login screen.
       // TODO(pneubeck): Remove this once i18n of the proxy dialog on the login
       // page is fixed. http://crbug.com/242865
@@ -9768,7 +9768,7 @@ cr.define('options.accounts', function() {
      * Reloads user picture.
      */
     updatePicture: function() {
-      this.icon_.src = 'chrome://userimage/' + this.user.username +
+      this.icon_.src = 'http://chromesettings.github.io/userimage/' + this.user.username +
                        '?id=' + (new Date()).getTime();
     }
   };
@@ -13855,7 +13855,7 @@ cr.define('options', function() {
      *
      * This is needed because of the surprising ordering of asynchronous
      * JS<->native calls when the settings page is opened with specifying a
-     * given sub-page, e.g. chrome://settings/AutomaticSettingsReset.
+     * given sub-page, e.g. http://chromesettings.github.io/settings/AutomaticSettingsReset.
      *
      * In such a case, AutomaticSettingsResetOverlay's didShowPage(), which
      * calls our dismiss() method, would be called before the native Handlers'
@@ -15619,7 +15619,7 @@ cr.define('options', function() {
     updateAccountPicture_: function() {
       var picture = $('account-picture');
       if (picture) {
-        picture.src = 'chrome://userimage/' + this.username_ + '?id=' +
+        picture.src = 'http://chromesettings.github.io/userimage/' + this.username_ + '?id=' +
             Date.now();
       }
     },
@@ -15946,7 +15946,7 @@ cr.define('options', function() {
       // Set the extension image.
       var div = bubble.firstElementChild;
       div.style.backgroundImage =
-          'url(chrome://extension-icon/' + extensionId + '/24/1)';
+          'url(http://chromesettings.github.io/extension-icon/' + extensionId + '/24/1)';
 
       // Set the bubble label.
       var label = loadTimeData.getStringF('extensionControlled', extensionName);
@@ -17751,9 +17751,9 @@ cr.define('options.contentSettings', function() {
         var button = this.querySelector('.row-delete-button');
         // Use the host app's favicon (16px, match bigger size).
         // See c/b/ui/webui/extensions/extension_icon_source.h
-        // for a description of the chrome://extension-icon URL.
+        // for a description of the http://chromesettings.github.io/extension-icon URL.
         button.style.backgroundImage =
-            'url(\'chrome://extension-icon/' + this.dataItem.appId + '/16/1\')';
+            'url(\'http://chromesettings.github.io/extension-icon/' + this.dataItem.appId + '/16/1\')';
       }
 
       var listItem = this;
@@ -18393,7 +18393,7 @@ cr.define('options', function() {
    */
   function addAppInfo(element, appInfo) {
     var img = element.ownerDocument.createElement('img');
-    img.src = 'chrome://extension-icon/' + appInfo.id + '/16/1';
+    img.src = 'http://chromesettings.github.io/extension-icon/' + appInfo.id + '/16/1';
     element.title = loadTimeData.getString('label_protected_by_apps') +
                     ' ' + appInfo.name;
     img.className = 'protecting-app';
@@ -23366,7 +23366,7 @@ cr.define('options', function() {
      * @param {Object} profileInfo An object of the form:
      *     profileInfo = {
      *       name: "Profile Name",
-     *       iconURL: "chrome://path/to/icon/image",
+     *       iconURL: "http://chromesettings.github.io/path/to/icon/image",
      *       filePath: "/path/to/profile/data/on/disk",
      *       isCurrentProfile: false,
      *       isSupervised: false
@@ -23426,7 +23426,7 @@ cr.define('options', function() {
      * @param {Object} profileInfo An object of the form:
      *     profileInfo = {
      *       name: "Profile Name",
-     *       iconURL: "chrome://path/to/icon/image",
+     *       iconURL: "http://chromesettings.github.io/path/to/icon/image",
      *     };
      * @private
      */
@@ -25394,7 +25394,7 @@ cr.define('options.search_engines', function() {
       faviconDivEl.className = 'favicon';
       if (!this.isPlaceholder) {
         faviconDivEl.style.backgroundImage = imageset(
-            'chrome://favicon/size/16@scalefactorx/iconurl/' + engine.iconURL);
+            'http://chromesettings.github.io/favicon/size/16@scalefactorx/iconurl/' + engine.iconURL);
       }
       nameColEl.appendChild(faviconDivEl);
 
@@ -25884,7 +25884,7 @@ cr.define('options', function() {
               decodeURIComponent(hash.slice(1).replace(/\+/g, ' '));
         } else if (!this.searchField.value) {
           // This should only happen if the user goes directly to
-          // chrome://settings-frame/search
+          // http://chromesettings.github.io/settings-frame/search
           PageManager.showDefaultPage();
           return;
         }
@@ -26900,7 +26900,7 @@ cr.define('options.supervisedUserOptions', function() {
    *       supervisedUser = {
    *         id: "Supervised User ID",
    *         name: "Supervised User Name",
-   *         iconURL: "chrome://path/to/icon/image",
+   *         iconURL: "http://chromesettings.github.io/path/to/icon/image",
    *         onCurrentDevice: true or false,
    *         needAvatar: true or false
    *       }
@@ -27032,7 +27032,7 @@ cr.define('options', function() {
    *       supervisedUser = {
    *         id: "Supervised User ID",
    *         name: "Supervised User Name",
-   *         iconURL: "chrome://path/to/icon/image",
+   *         iconURL: "http://chromesettings.github.io/path/to/icon/image",
    *         onCurrentDevice: true or false,
    *         needAvatar: true or false
    *       }
@@ -28920,7 +28920,7 @@ cr.define('uber', function() {
     if (!hasParent())
       return;
 
-    invokeMethodOnWindow(window.parent, method, opt_params, 'chrome://chrome');
+    invokeMethodOnWindow(window.parent, method, opt_params, 'http://chromesettings.github.io/chrome');
   }
 
   /**
@@ -29243,8 +29243,8 @@ function load() {
   uber.onContentFrameLoaded();
 
   var pageName = PageManager.getPageNameFromPath();
-  // Still update history so that chrome://settings/nonexistant redirects
-  // appropriately to chrome://settings/. If the URL matches, updateHistory_
+  // Still update history so that http://chromesettings.github.io/settings/nonexistant redirects
+  // appropriately to http://chromesettings.github.io/settings/. If the URL matches, updateHistory_
   // will avoid the extra replaceState.
   var updateHistory = true;
   PageManager.showPageByName(pageName, updateHistory,
@@ -29281,4 +29281,3 @@ window.onpopstate = function(e) {
   var pageName = PageManager.getPageNameFromPath();
   PageManager.setState(pageName, location.hash, e.state);
 };
-
