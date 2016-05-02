@@ -18,7 +18,7 @@ var NetworkIconParamType;
 
 (function() {
 /** @const {string} */ var RESOURCE_IMAGE_BASE =
-    'chrome://resources/cr_elements/network/';
+    'http://chromesettings.github.io/resources/cr_elements/network/';
 
 /** @const {string} */ var RESOURCE_IMAGE_EXT = '.png';
 
