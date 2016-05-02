@@ -4,15 +4,15 @@
 <head>
 <meta charset="utf-8">
 <title i18n-content="optionsPageTitle"></title>
-<link rel="stylesheet" href="chrome://resources/css/bubble.css">
-<link rel="stylesheet" href="chrome://resources/css/bubble_button.css">
-<link rel="stylesheet" href="chrome://resources/css/chrome_shared.css">
-<link rel="stylesheet" href="chrome://resources/css/controlled_indicator.css">
-<link rel="stylesheet" href="chrome://resources/css/list.css">
-<link rel="stylesheet" href="chrome://resources/css/overlay.css">
-<link rel="stylesheet" href="chrome://resources/css/spinner.css">
-<link rel="stylesheet" href="chrome://resources/css/throbber.css">
-<link rel="stylesheet" href="chrome://resources/css/tree.css">
+<link rel="stylesheet" href="resources/css/bubble.css">
+<link rel="stylesheet" href="resources/css/bubble_button.css">
+<link rel="stylesheet" href="resources/css/chrome_shared.css">
+<link rel="stylesheet" href="resources/css/controlled_indicator.css">
+<link rel="stylesheet" href="resources/css/list.css">
+<link rel="stylesheet" href="resources/css/overlay.css">
+<link rel="stylesheet" href="resources/css/spinner.css">
+<link rel="stylesheet" href="resources/css/throbber.css">
+<link rel="stylesheet" href="resources/css/tree.css">
 <style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
@@ -811,7 +811,7 @@ html:not([enablePepperFlashSettings]) .pepper-flash-settings {
 }
 
 .settings-banner > .close-button {
-  background-image: -webkit-image-set(url(chrome://theme/IDR_CLOSE_DIALOG) 1x, url(chrome://theme/IDR_CLOSE_DIALOG@2x) 2x);
+  background-image: -webkit-image-set(url(theme/IDR_CLOSE_DIALOG) 1x, url(theme/IDR_CLOSE_DIALOG@2x) 2x);
   background-position: center;
   background-repeat: no-repeat;
   height: 14px;
@@ -828,11 +828,11 @@ html[dir='rtl'] .settings-banner > .close-button {
 }
 
 .settings-banner > .close-button:hover {
-  background-image: -webkit-image-set(url(chrome://theme/IDR_CLOSE_DIALOG_H) 1x, url(chrome://theme/IDR_CLOSE_DIALOG_H@2x) 2x);
+  background-image: -webkit-image-set(url(theme/IDR_CLOSE_DIALOG_H) 1x, url(theme/IDR_CLOSE_DIALOG_H@2x) 2x);
 }
 
 .settings-banner > .close-button:active {
-  background-image: -webkit-image-set(url(chrome://theme/IDR_CLOSE_DIALOG_P) 1x, url(chrome://theme/IDR_CLOSE_DIALOG_P@2x) 2x);
+  background-image: -webkit-image-set(url(theme/IDR_CLOSE_DIALOG_P) 1x, url(theme/IDR_CLOSE_DIALOG_P@2x) 2x);
 }
 
 .settings-banner .content-area {
@@ -874,7 +874,7 @@ html[dir='rtl'] .settings-banner > .close-button {
 
 #secondary-user-banner .content-area .badge {
   background-color: rgb(210, 210, 212);
-  background-image: -webkit-image-set(url(chrome://theme/IDR_SECONDARY_USER_SETTINGS) 1x, url(chrome://theme/IDR_SECONDARY_USER_SETTINGS@2x) 2x);
+  background-image: -webkit-image-set(url(theme/IDR_SECONDARY_USER_SETTINGS) 1x, url(theme/IDR_SECONDARY_USER_SETTINGS@2x) 2x);
 }
 </style>
 <style>/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -1143,7 +1143,7 @@ list:not([disabled]) > .network-group[selected] {
 }
 
 .network-add-connection {
-  background-image: -webkit-image-set(url(chrome://theme/IDR_NETWORK_ADD_CONNECTION) 1x, url(chrome://theme/IDR_NETWORK_ADD_CONNECTION@2x) 2x);
+  background-image: -webkit-image-set(url(theme/IDR_NETWORK_ADD_CONNECTION) 1x, url(theme/IDR_NETWORK_ADD_CONNECTION@2x) 2x);
   background-position: center center !important;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -1894,7 +1894,7 @@ div:not(.none):hover > .handlers-remove-column {
 #hotword-search-setting-indicator > div,
 #hotword-always-on-search-setting-indicator > div,
 #hotword-no-dsp-search-setting-indicator > div {
-  background: -webkit-image-set(url(chrome://theme/IDR_WARNING) 1x, url(chrome://theme/IDR_WARNING@2x) 2x) left top no-repeat;
+  background: -webkit-image-set(url(theme/IDR_WARNING) 1x, url(theme/IDR_WARNING@2x) 2x) left top no-repeat;
   background-size: 18px;
 }
 </style>
@@ -3085,12 +3085,12 @@ html[dir=rtl] .subpages-nav-tabs .tab-label {
 }
 
 #update-status-icon.working {
-  background-image: url(chrome://resources/images/throbber_small.svg);
+  background-image: url(resources/images/throbber_small.svg);
   background-size: 16px;
 }
 
 #update-status-icon.failed {
-  background-image: url(chrome://resources/images/error.svg);
+  background-image: url(resources/images/error.svg);
   background-size: 18px;
 }
 
@@ -3766,7 +3766,7 @@ input#userNameEdit:invalid {
 }
 
 #flip-photo {
-  background: -webkit-image-set(url(chrome://theme/IDR_MIRROR_FLIP) 1x, url(chrome://theme/IDR_MIRROR_FLIP@2x) 2x) no-repeat;
+  background: -webkit-image-set(url(theme/IDR_MIRROR_FLIP) 1x, url(theme/IDR_MIRROR_FLIP@2x) 2x) no-repeat;
   border: none;
   bottom: 44px;  /* 8px + image bottom. */
   display: block;
@@ -3791,13 +3791,13 @@ html[dir=rtl] #flip-photo {
 }
 
 .camera:not(.live) #discard-photo {
-  background: -webkit-image-set(url(chrome://theme/IDR_USER_IMAGE_RECYCLE) 1x, url(chrome://theme/IDR_USER_IMAGE_RECYCLE@2x) 2x)
+  background: -webkit-image-set(url(theme/IDR_USER_IMAGE_RECYCLE) 1x, url(theme/IDR_USER_IMAGE_RECYCLE@2x) 2x)
       no-repeat center center;
   display: block;
 }
 
 .camera.live.online #take-photo {
-  background: -webkit-image-set(url(chrome://theme/IDR_USER_IMAGE_CAPTURE) 1x, url(chrome://theme/IDR_USER_IMAGE_CAPTURE@2x) 2x)
+  background: -webkit-image-set(url(theme/IDR_USER_IMAGE_CAPTURE) 1x, url(theme/IDR_USER_IMAGE_CAPTURE@2x) 2x)
       no-repeat center -1px;
   display: block;
 }
@@ -4242,40 +4242,40 @@ span.cert-policy {
 }
 </style>
 
-<script src="chrome://resources/js/action_link.js"></script>
-<script src="chrome://resources/js/cr.js"></script>
-<script src="chrome://resources/js/event_tracker.js"></script>
-<script src="chrome://resources/js/cr/event_target.js"></script>
-<script src="chrome://resources/js/cr/ui.js"></script>
-<script src="chrome://resources/js/cr/ui/touch_handler.js"></script>
-<script src="chrome://resources/js/cr/ui/array_data_model.js"></script>
-<script src="chrome://resources/js/cr/ui/bubble.js"></script>
-<script src="chrome://resources/js/cr/ui/bubble_button.js"></script>
-<script src="chrome://resources/js/cr/ui/controlled_indicator.js"></script>
-<script src="chrome://resources/js/cr/ui/focus_manager.js"></script>
-<script src="chrome://resources/js/cr/ui/focus_outline_manager.js"></script>
-<script src="chrome://resources/js/cr/ui/list_selection_model.js"></script>
-<script src="chrome://resources/js/cr/ui/list_selection_controller.js"></script>
-<script src="chrome://resources/js/cr/ui/list_single_selection_model.js">
+<script src="resources/js/action_link.js"></script>
+<script src="resources/js/cr.js"></script>
+<script src="resources/js/event_tracker.js"></script>
+<script src="resources/js/cr/event_target.js"></script>
+<script src="resources/js/cr/ui.js"></script>
+<script src="resources/js/cr/ui/touch_handler.js"></script>
+<script src="resources/js/cr/ui/array_data_model.js"></script>
+<script src="resources/js/cr/ui/bubble.js"></script>
+<script src="resources/js/cr/ui/bubble_button.js"></script>
+<script src="resources/js/cr/ui/controlled_indicator.js"></script>
+<script src="resources/js/cr/ui/focus_manager.js"></script>
+<script src="resources/js/cr/ui/focus_outline_manager.js"></script>
+<script src="resources/js/cr/ui/list_selection_model.js"></script>
+<script src="resources/js/cr/ui/list_selection_controller.js"></script>
+<script src="resources/js/cr/ui/list_single_selection_model.js">
 </script>
-<script src="chrome://resources/js/cr/ui/list_item.js"></script>
-<script src="chrome://resources/js/cr/ui/list.js"></script>
-<script src="chrome://resources/js/cr/ui/menu_item.js"></script>
-<script src="chrome://resources/js/cr/ui/menu.js"></script>
-<script src="chrome://resources/js/cr/ui/autocomplete_list.js"></script>
-<script src="chrome://resources/js/cr/ui/grid.js"></script>
-<script src="chrome://resources/js/cr/ui/overlay.js"></script>
-<script src="chrome://resources/js/cr/ui/position_util.js"></script>
-<script src="chrome://resources/js/cr/ui/repeating_button.js"></script>
-<script src="chrome://resources/js/cr/ui/tree.js"></script>
-<script src="chrome://resources/js/cr/ui/page_manager/page_manager.js"></script>
-<script src="chrome://resources/js/cr/ui/page_manager/page.js"></script>
-<script src="chrome://resources/js/load_time_data.js"></script>
-<script src="chrome://resources/js/parse_html_subset.js"></script>
-<script src="chrome://resources/js/util.js"></script>
+<script src="resources/js/cr/ui/list_item.js"></script>
+<script src="resources/js/cr/ui/list.js"></script>
+<script src="resources/js/cr/ui/menu_item.js"></script>
+<script src="resources/js/cr/ui/menu.js"></script>
+<script src="resources/js/cr/ui/autocomplete_list.js"></script>
+<script src="resources/js/cr/ui/grid.js"></script>
+<script src="resources/js/cr/ui/overlay.js"></script>
+<script src="resources/js/cr/ui/position_util.js"></script>
+<script src="resources/js/cr/ui/repeating_button.js"></script>
+<script src="resources/js/cr/ui/tree.js"></script>
+<script src="resources/js/cr/ui/page_manager/page_manager.js"></script>
+<script src="resources/js/cr/ui/page_manager/page.js"></script>
+<script src="resources/js/load_time_data.js"></script>
+<script src="resources/js/parse_html_subset.js"></script>
+<script src="resources/js/util.js"></script>
 
-<script src="chrome://settings-frame/strings.js"></script>
-<script src="chrome://settings-frame/options_bundle.js"></script>
+<script src="settings-frame/strings.js"></script>
+<script src="settings-frame/options_bundle.js"></script>
 </head>
 
 <body>
@@ -4642,7 +4642,7 @@ span.cert-policy {
               i18n-content="manageExceptions"></button>
         </div>
         <div id="disable-plugins-container">
-          <a href="chrome://plugins" i18n-content="manageIndividualPlugins"
+          <a href="plugins" i18n-content="manageIndividualPlugins"
               target="_blank"></a>
         </div>
       </div>
@@ -5823,7 +5823,7 @@ span.cert-policy {
     </div>
   </div>
 </div>
-<script src="chrome://resources/js/jstemplate_compiled.js"></script>
+<script src="resources/js/jstemplate_compiled.js"></script>
 
   <div id="search-engine-manager-page" class="page" hidden>
   <div class="close-button"></div>
@@ -5916,8 +5916,8 @@ span.cert-policy {
   <h1 i18n-content="aboutTitle"></h1>
    <div class="content-area">
   <div id="about-container">
-    <img id="product-logo" srcset="chrome://theme/current-channel-logo@1x 1x,
-                                   chrome://theme/current-channel-logo@2x 2x"
+    <img id="product-logo" srcset="theme/current-channel-logo@1x 1x,
+                                   theme/current-channel-logo@2x 2x"
         alt="">
     <div id="product-description">
       <h2 i18n-content="aboutProductTitle"></h2>
@@ -8418,8 +8418,8 @@ span.cert-policy {
   </div>
 </div>
 
-<link rel="import" href="chrome://resources/cr_elements/network/cr_network_icon.html">
-  <link rel="import" href="chrome://resources/cr_elements/network/cr_onc_types.html">
+<link rel="import" href="resources/cr_elements/network/cr_network_icon.html">
+  <link rel="import" href="resources/cr_elements/network/cr_onc_types.html">
   <div id="secondary-user-banner" class="settings-banner" hidden>
   <div class="content-area">
     <div class="badge"></div>
@@ -9408,6 +9408,6 @@ span.cert-policy {
   </div>
 </div>
 
-<script src="chrome://resources/js/i18n_template.js"></script>
+<script src="resources/js/i18n_template.js"></script>
 </body>
 </html>
